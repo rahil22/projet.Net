@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="481.0" prefWidth="719.0" style="-fx-background-color: khaki;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.GestionImmobiliere.GUI.Facture_demenagController">
+    <stylesheets>
+        <URL value="@facture_demenag.css" />
+    </stylesheets>
+   <children>
+      <Label fx:id="quant_demenag" layoutX="20.0" layoutY="71.0" text="Quantité demenagement " textFill="#f2287c" />
+      <Label layoutX="16.0" layoutY="161.0" text="Nombre personnels " textFill="#ff007b" />
+      <Label layoutX="16.0" layoutY="213.0" text="Adresse" textFill="#fc1575" />
+      <Label layoutX="16.0" layoutY="120.0" text="Kilometrage" textFill="#ee076f" />
+      <Label layoutX="16.0" layoutY="264.0" text="Type de transport" textFill="#f01672" />
+      <TextField fx:id="quantite_dem" layoutX="14.0" layoutY="95.0" />
+      <TextField fx:id="type_trans" layoutX="14.0" layoutY="290.0" />
+      <TextField fx:id="adresse" layoutX="14.0" layoutY="239.0" />
+      <TextField fx:id="nbr_pers" layoutX="14.0" layoutY="188.0" />
+      <TextField fx:id="kilometre" layoutX="14.0" layoutY="137.0" />
+      <Button layoutX="63.0" layoutY="428.0" mnemonicParsing="false" onAction="#ajouter_facture" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: firebrick;" text="Ajouter" textFill="#fff200" />
+      <Button layoutX="63.0" layoutY="383.0" mnemonicParsing="false" onAction="#supprimer_facture" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: firebrick;" text="Supprimer" textFill="#f8d50d" />
+      <Button layoutX="63.0" layoutY="341.0" mnemonicParsing="false" onAction="#modifier_facture" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: firebrick;" text="Modifier" textFill="#ffdf00" />
+      <ImageView fitHeight="225.0" fitWidth="383.0" layoutX="223.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image1.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="#058a59" layoutX="14.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FACTURE" wrappingWidth="169.13671875">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tree_facture" layoutX="178.0" layoutY="20.0" prefHeight="200.0" prefWidth="530.0" style="-fx-background-color: blanchedalmond; -fx-border-color: coral;">
+        <columns>
+          <TableColumn fx:id="qtt" prefWidth="75.0" text="Quantité demenagement " />
+          <TableColumn fx:id="kilometr" prefWidth="75.0" text="Kilometrage" />
+            <TableColumn fx:id="nbr" prefWidth="75.0" text="Nombre personnels " />
+            <TableColumn fx:id="addr" prefWidth="75.0" text="Adresse" />
+            <TableColumn fx:id="typetr" prefWidth="75.0" text="Type de transport" />
+            <TableColumn fx:id="id_ser" prefWidth="75.0" text="ID service" />
+            <TableColumn fx:id="id_us" prefWidth="75.0" text="ID user" />
+        </columns>
+      </TableView>
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>
